@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple E-Commerce App</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(120deg, #74ebd5, #ACB6E5);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h2, h3 {
+      color: #333;
+      text-align: center;
+    }
+
+    .form-container {
+      background-color: white;
+      max-width: 400px;
+      width: 90%;
+      padding: 30px;
+      margin-top: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+      width: 100%;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #productDisplay {
+      width: 90%;
+      max-width: 600px;
+      margin-top: 40px;
+    }
+
+    .product-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-left: 5px solid #4CAF50;
+      padding: 16px;
+      margin: 12px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: scale(1.01);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Enter Product</h2>
+    <input type="text" id="nameField" placeholder="Enter Product Name" />
+    <input type="number" id="costField" placeholder="Enter Product Price" />
+    <input type="number" id="stockField" placeholder="Enter Product Quantity" />
+    <input type="text" id="descField" placeholder="Enter Product Description" />
+    <button id="submitBtn">Add Product</button>
+  </div>
+
+  <div id="productDisplay">
+    <h3>Available Products</h3>
+    <!-- Products will appear here -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
